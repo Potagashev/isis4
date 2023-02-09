@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: isis-4
+spec:
+  containers:
+    - name: isis4-web
+      image: alexpotagashev/myrepo:isis2
+      ports:
+        - containerPort: 80
+      resources:
+        requests:
+          cpu: 50m
+          memory: 10Mi
+        limits:
+          cpu: 100m
+          memory: 10Mi
